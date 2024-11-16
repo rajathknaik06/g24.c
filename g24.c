@@ -20,14 +20,16 @@ int main() {
     int asciiValue = (int)charInput;
     if (asciiValue >= 65 && asciiValue <= 90) {
         asciiValue += 32;
-    } 
+    }                                                    /*Uppercase letters (A-Z) are converted to lowercase by adding 32 to their ASCII value.
+Lowercase letters (a-z) are converted to uppercase by subtracting 32 from their ASCII value.  If the input is not a letter (e.g., digits, punctuation), no conversion occurs, and the original ASCII value is displayed.*/
     
-    else if (asciiValue >= 97 && asciiValue <= 122) {
+    else if (asciiValue >= 97 && asciiValue <= 122) {               
         asciiValue -= 32;
-    } 
+    }                                                    /*ASCII values for uppercase letters (A-Z) are 65 to 90.
+ASCII values for lowercase letters (a-z) are 97 to 122.*/
     
     else {
-        printf("ASCII Value: %d", asciiValue);
+        printf("ASCII Value: %d", asciiValue);       //it no. is less than 65 than it print same no.
         return 0;
     }
     printf("ASCII Value: %d", asciiValue);
